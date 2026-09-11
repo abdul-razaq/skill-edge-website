@@ -2,8 +2,10 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { company } from "@/content/site";
 
-/** Horizontal lockup viewBox is 365.31 x 100. */
-const ASPECT = 3.6531;
+/** Horizontal lockup is 1164 x 280. */
+const LOCKUP_ASPECT = 1164 / 280;
+/** Symbol is 347 x 279. */
+const MARK_ASPECT = 347 / 279;
 
 type LogoProps = {
   /** Rendered height in pixels; width is derived from the lockup aspect ratio. */
@@ -13,12 +15,12 @@ type LogoProps = {
   className?: string;
 };
 
-export function Logo({ height = 36, variant = "color", priority, className }: LogoProps) {
+export function Logo({ height = 42, variant = "color", priority, className }: LogoProps) {
   return (
     <Image
-      src={variant === "white" ? "/brand/logo-horizontal-white.svg" : "/brand/logo-horizontal.svg"}
+      src={variant === "white" ? "/brand/logo-horizontal-white.png" : "/brand/logo-horizontal.png"}
       alt={company.name}
-      width={Math.round(height * ASPECT)}
+      width={Math.round(height * LOCKUP_ASPECT)}
       height={height}
       priority={priority}
       className={cn("w-auto", className)}
@@ -39,10 +41,10 @@ export function LogoMark({
 }) {
   return (
     <Image
-      src={variant === "white" ? "/brand/logo-mark-white.svg" : "/brand/logo-mark.svg"}
+      src={variant === "white" ? "/brand/logo-mark-white.png" : "/brand/logo-mark.png"}
       alt=""
       aria-hidden
-      width={Math.round(size * 1.2401)}
+      width={Math.round(size * MARK_ASPECT)}
       height={size}
       className={cn("w-auto", className)}
       style={{ height: size }}

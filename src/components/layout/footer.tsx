@@ -14,7 +14,7 @@ export function Footer() {
       <Container>
         <div className="grid gap-12 py-16 sm:py-20 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr] lg:gap-10">
           <div className="max-w-sm">
-            <Logo height={38} variant="white" />
+            <Logo height={42} variant="white" />
             <p className="mt-6 text-sm leading-relaxed text-ink-300">{company.taglinePlain}</p>
             <a
               href={contact.linkedin}

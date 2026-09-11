@@ -43,7 +43,7 @@ export function Header() {
       <Container>
         <div className="flex h-18 items-center justify-between gap-6">
           <Link href="/" aria-label={`${company.name} home page`} className="shrink-0">
-            <Logo height={34} priority />
+            <Logo height={44} priority />
           </Link>
 
           <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">

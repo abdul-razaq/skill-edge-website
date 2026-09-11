@@ -5,8 +5,8 @@ const nextConfig: NextConfig = {
   // uploaded to any host. The site has no server-side code — the enquiry form
   // posts directly to Formspree.
   output: "export",
-  // Required by `output: "export"`. Every image on the site is an SVG, so the
-  // optimizer would not have done anything useful anyway.
+  // Required by `output: "export"`. The logo lockups are PNGs from the original
+  // artwork; the optimizer is not available under static export.
   images: { unoptimized: true },
   trailingSlash: true,
 };

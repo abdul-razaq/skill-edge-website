@@ -37,17 +37,17 @@ Source of truth was the client's `About Skill Edge.docx` and `Student Testimonia
 
 ## Brand assets
 
-`public/brand/` holds SVG logos traced from the supplied PNG:
+`public/brand/` holds the original logo artwork (transparent PNGs) plus SVG fallbacks:
 
-| File                         | Use                                 |
-| ---------------------------- | ----------------------------------- |
-| `logo-horizontal.svg`        | Header (mark + wordmark, side by side) |
-| `logo-horizontal-white.svg`  | Footer and dark backgrounds         |
-| `logo-full.svg`              | Original stacked lockup             |
-| `logo-mark.svg`              | Symbol only                         |
-| `favicon.svg`                | Browser tab icon                    |
-| `og-image.png`               | Link preview for WhatsApp, LinkedIn and other shares (1200x630) |
-| `apple-touch-icon.png`       | iOS home screen icon (180x180)      |
+| File                          | Use                                 |
+| ----------------------------- | ----------------------------------- |
+| `logo-horizontal.png`         | Header (mark + wordmark, side by side) |
+| `logo-horizontal-white.png`   | Footer and dark backgrounds         |
+| `logo-full.png`               | Original stacked lockup             |
+| `logo-mark.png`               | Symbol only                         |
+| `favicon.png` / `favicon.svg` | Browser tab icon                    |
+| `og-image.png`                | Link preview for WhatsApp, LinkedIn and other shares (1200x630) |
+| `apple-touch-icon.png`        | iOS home screen icon (180x180)      |
 
 `og-image.png` is generated from the logo and tagline. If the tagline or brand
 colours change, regenerate it at 1200x630 and replace the file.
