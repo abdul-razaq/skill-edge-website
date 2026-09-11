@@ -1,0 +1,86 @@
+# Skill Edge Tech Solutions — Website
+
+Five-page corporate site for Skill Edge Tech Solutions, built with Next.js 16, React 19 and
+Tailwind CSS v4. The site has no backend: `npm run build` produces a static `out/` folder that can
+be uploaded to any host.
+
+## Running it
+
+```bash
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # static export into ./out
+```
+
+## Pages
+
+| Route       | Contents                                                              |
+| ----------- | --------------------------------------------------------------------- |
+| `/`         | Hero, service overview, course preview, what's included, testimonials |
+| `/about`    | Mission, vision, company story, the five core values                  |
+| `/courses`  | All four programmes with modules, duration, format and capstone       |
+| `/services` | Training, ERP implementation, process optimization, consulting        |
+| `/contact`  | Enquiry form, WhatsApp / phone / email / LinkedIn                     |
+
+## Where the content lives
+
+All copy is in `src/content/` so it can be edited without touching components:
+
+- `site.ts` — company details, mission, vision, contact details, nav, core values, benefits
+- `courses.ts` — the course catalog
+- `services.ts` — the four service lines
+- `testimonials.ts` — student testimonials
+
+Source of truth was the client's `About Skill Edge.docx` and `Student Testimonial.docx`.
+
+## Brand assets
+
+`public/brand/` holds SVG logos traced from the supplied PNG:
+
+| File                         | Use                                 |
+| ---------------------------- | ----------------------------------- |
+| `logo-horizontal.svg`        | Header (mark + wordmark, side by side) |
+| `logo-horizontal-white.svg`  | Footer and dark backgrounds         |
+| `logo-full.svg`              | Original stacked lockup             |
+| `logo-mark.svg`              | Symbol only                         |
+| `favicon.svg`                | Browser tab icon                    |
+
+Colours were sampled from the logo artwork and are defined as Tailwind tokens in
+`src/app/globals.css`:
+
+- `brand-500` `#1A7552` — the green "S"
+- `ocean-500` `#1C527E` — the blue "E" / arrow
+- `ink-900` `#0F2D47` — the wordmark navy, used for body headings and dark sections
+
+## Contact form
+
+The form posts directly to Formspree. To connect it:
+
+1. Create a form at [formspree.io](https://formspree.io) that delivers to
+   `info@skilledgetechsolutions.com`.
+2. Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_FORMSPREE_ENDPOINT` to the endpoint URL.
+3. Rebuild.
+
+Until that variable is set the form falls back to opening the visitor's email client with the
+enquiry pre-filled, so enquiries are never silently dropped.
+
+## Deploying
+
+`npm run build` writes a static site to `out/`. Upload the contents of that folder to any web host,
+or point Vercel / Netlify / Cloudflare Pages at the repository.
+
+Before going live, update the domain in three places if it differs from
+`www.skilledgetechsolutions.com`:
+
+- `src/app/layout.tsx` — `metadataBase`
+- `src/app/sitemap.ts` — `BASE_URL`
+- `src/app/robots.ts` — `sitemap`
+
+## Still needed from the client
+
+These were blank in the brief and are marked `TODO(client)` in `src/content/site.ts`:
+
+- Course pricing and deposit amounts (pages currently use a "Request pricing" call to action)
+- Office address or a confirmed location statement
+- Instagram / Facebook / X links (only LinkedIn is wired up)
+- Instructor profiles, if they want an instructors section

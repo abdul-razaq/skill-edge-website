@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+/* Brand palette sampled directly from the Skill Edge logo artwork:
+   green #1A7552 (S), blue #1C527E (E/arrow), navy #0F2D47 (wordmark). */
+@theme {
+  --color-brand-50: #eff8f3;
+  --color-brand-100: #d7ede2;
+  --color-brand-200: #b0dbc6;
+  --color-brand-300: #7fc3a4;
+  --color-brand-400: #4ba47e;
+  --color-brand-500: #1a7552;
+  --color-brand-600: #166344;
+  --color-brand-700: #135038;
+  --color-brand-800: #0f3f2c;
+  --color-brand-900: #0c3123;
+
+  --color-ocean-50: #eff5fa;
+  --color-ocean-100: #dae8f3;
+  --color-ocean-200: #b5d0e6;
+  --color-ocean-300: #85b2d4;
+  --color-ocean-400: #4d8dbc;
+  --color-ocean-500: #1c527e;
+  --color-ocean-600: #17466c;
+  --color-ocean-700: #133858;
+  --color-ocean-800: #0f2c45;
+  --color-ocean-900: #0c2337;
+
+  --color-ink-50: #f4f7f9;
+  --color-ink-100: #e6ecf1;
+  --color-ink-200: #c9d6e0;
+  --color-ink-300: #9cb2c4;
+  --color-ink-400: #6b89a2;
+  --color-ink-500: #4a6a85;
+  --color-ink-600: #35536b;
+  --color-ink-700: #234058;
+  --color-ink-800: #16344c;
+  --color-ink-900: #0f2d47;
+  --color-ink-950: #0a1f31;
+
+  --color-gold-50: #fef8e7;
+  --color-gold-100: #fdefc4;
+  --color-gold-200: #fbe190;
+  --color-gold-300: #f8d066;
+  --color-gold-400: #f5c451;
+  --color-gold-500: #f0b429;
+  --color-gold-600: #d9971a;
+
+  --font-display: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-card: 0 1px 2px rgb(15 45 71 / 0.04), 0 8px 24px -12px rgb(15 45 71 / 0.12);
+  --shadow-lift: 0 2px 4px rgb(15 45 71 / 0.05), 0 20px 40px -20px rgb(15 45 71 / 0.22);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: var(--color-ink-700);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    color: var(--color-ink-900);
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background-color: var(--color-brand-100);
+    color: var(--color-brand-800);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
