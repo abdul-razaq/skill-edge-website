@@ -44,6 +44,11 @@ Source of truth was the client's `About Skill Edge.docx` and `Student Testimonia
 | `logo-full.svg`              | Original stacked lockup             |
 | `logo-mark.svg`              | Symbol only                         |
 | `favicon.svg`                | Browser tab icon                    |
+| `og-image.png`               | Link preview for WhatsApp, LinkedIn and other shares (1200x630) |
+| `apple-touch-icon.png`       | iOS home screen icon (180x180)      |
+
+`og-image.png` is generated from the logo and tagline. If the tagline or brand
+colours change, regenerate it at 1200x630 and replace the file.
 
 Colours were sampled from the logo artwork and are defined as Tailwind tokens in
 `src/app/globals.css`:

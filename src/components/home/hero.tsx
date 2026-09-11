@@ -64,10 +64,10 @@ export function Hero() {
             <div className="rounded-3xl bg-white p-2 shadow-lift ring-1 ring-ink-100">
               <div className="rounded-[1.25rem] bg-ink-50/70 p-7 sm:p-9">
                 <div className="flex items-baseline justify-between gap-4">
-                  <h2 className="text-sm font-semibold uppercase tracking-[0.14em] text-ink-500">
+                  <h2 className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-500 sm:text-sm sm:tracking-[0.14em]">
                     Current programmes
                   </h2>
-                  <span className="text-sm font-semibold text-brand-600">
+                  <span className="shrink-0 text-xs font-semibold text-brand-600 sm:text-sm">
                     {courses.length} tracks
                   </span>
                 </div>
@@ -76,12 +76,12 @@ export function Hero() {
                   {courses.map((course) => (
                     <li
                       key={course.slug}
-                      className="flex items-center justify-between gap-5 rounded-2xl bg-white px-5 py-4 shadow-card"
+                      className="flex flex-col gap-2.5 rounded-2xl bg-white px-5 py-4 shadow-card sm:flex-row sm:items-center sm:justify-between sm:gap-5"
                     >
                       <span className="text-[0.9375rem] font-semibold leading-snug text-ink-900">
                         {course.title}
                       </span>
-                      <span className="shrink-0 rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700">
+                      <span className="self-start rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700 sm:shrink-0 sm:self-auto">
                         {course.duration}
                       </span>
                     </li>

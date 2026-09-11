@@ -34,19 +34,19 @@ export function ContactForm() {
     const form = event.currentTarget;
     const data = new FormData(form);
 
-    // No endpoint configured yet — hand off to the visitor's mail client.
+    // No endpoint configured yet, so hand off to the visitor's mail client.
     if (!ENDPOINT) {
       const body = [
         `Name: ${data.get("name")}`,
         `Email: ${data.get("email")}`,
-        `Phone: ${data.get("phone") || "—"}`,
+        `Phone: ${data.get("phone") || "Not provided"}`,
         `Interested in: ${data.get("interest")}`,
         "",
         String(data.get("message") ?? ""),
       ].join("\n");
 
       window.location.href = `mailto:${contact.email}?subject=${encodeURIComponent(
-        `Website enquiry — ${data.get("interest")}`,
+        `Website enquiry: ${data.get("interest")}`,
       )}&body=${encodeURIComponent(body)}`;
       return;
     }
@@ -76,7 +76,7 @@ export function ContactForm() {
           <CircleCheck className="size-6" />
         </span>
         <div>
-          <h2 className="text-2xl font-semibold">Thank you — your message is on its way</h2>
+          <h2 className="text-2xl font-semibold">Thank you, your message is on its way</h2>
           <p className="mt-3 leading-relaxed text-ink-600">
             We have received your enquiry and will get back to you shortly. If it is urgent, reach
             us on WhatsApp at {contact.whatsapp}.
@@ -204,8 +204,10 @@ export function ContactForm() {
   );
 }
 
+// `min-w-0` matters: without it a control's intrinsic width (for the select,
+// the width of its longest option) stops the grid shrinking on narrow screens.
 const inputClasses =
-  "w-full rounded-xl border border-ink-200 bg-white px-4 py-3 text-ink-900 placeholder:text-ink-300 " +
+  "w-full min-w-0 rounded-xl border border-ink-200 bg-white px-4 py-3 text-ink-900 placeholder:text-ink-300 " +
   "transition-colors focus:border-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-100";
 
 function Field({
@@ -222,7 +224,7 @@ function Field({
   children: React.ReactNode;
 }) {
   return (
-    <div className={cn("flex flex-col gap-2", className)}>
+    <div className={cn("flex min-w-0 flex-col gap-2", className)}>
       <label htmlFor={htmlFor} className="text-sm font-medium text-ink-700">
         {label}
         {optional ? <span className="ml-1.5 font-normal text-ink-400">(optional)</span> : null}

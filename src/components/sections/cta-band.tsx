@@ -12,7 +12,7 @@ type CtaBandProps = {
 /** Closing conversion band, repeated at the foot of every page. */
 export function CtaBand({
   title = "Ready to take the next step?",
-  description = "Tell us where you are and what you are aiming for. We will point you to the programme or service that fits — no pressure, no obligation.",
+  description = "Tell us where you are and what you are aiming for, and we will point you to the programme or service that fits. No pressure, no obligation.",
 }: CtaBandProps) {
   return (
     <section className="bg-white pb-20 sm:pb-24 lg:pb-28">

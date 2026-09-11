@@ -51,7 +51,7 @@ export const services: Service[] = [
     slug: "technology-consulting",
     title: "Technology Consulting",
     description:
-      "Advisory for organisations deciding what to build, buy or change — so digital investment is directed at the outcomes that matter.",
+      "Advisory for organisations deciding what to build, buy or change, so digital investment is directed at the outcomes that matter.",
     items: [
       "ERP advisory & solution design",
       "Digital transformation strategy",

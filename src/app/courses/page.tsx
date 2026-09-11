@@ -12,9 +12,9 @@ import { courses } from "@/content/courses";
 import { whatsappLink } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Courses",
+  title: "Training Courses",
   description:
-    "Practical weekend training in Business Analysis, Dynamics 365 Business Central, Microsoft Power Platform and AI skills — each closing with a capstone project, certificate and class recordings.",
+    "Practical weekend training in Business Analysis, Dynamics 365 Business Central, Microsoft Power Platform and AI skills. Every track closes with a capstone project, certificate and class recordings.",
 };
 
 export default function CoursesPage() {
@@ -102,7 +102,7 @@ export default function CoursesPage() {
                     </ul>
                   </div>
 
-                  <aside className="flex flex-col gap-7 border-t border-ink-100 bg-ink-50/70 p-9 sm:p-11 lg:border-l lg:border-t-0 lg:p-12">
+                  <aside className="flex flex-col gap-7 border-t border-ink-100 bg-ink-50/70 p-9 sm:p-11 lg:justify-center lg:border-l lg:border-t-0 lg:p-12">
                     <Detail
                       icon={<CalendarClock className="size-[18px] text-brand-600" />}
                       label="Duration"
@@ -119,7 +119,7 @@ export default function CoursesPage() {
                       value={course.capstone}
                     />
 
-                    <div className="mt-auto flex flex-col gap-3 pt-2">
+                    <div className="flex flex-col gap-3 pt-2">
                       <ButtonLink href="/contact" className="w-full">
                         Request pricing
                       </ButtonLink>
@@ -166,7 +166,7 @@ export default function CoursesPage() {
               },
               {
                 title: "Build and present your capstone",
-                body: "You scope a real scenario, build the solution and present it — the portfolio piece you take into interviews.",
+                body: "You scope a real scenario, build the solution and present it. That becomes the portfolio piece you take into interviews.",
               },
               {
                 title: "Leave with proof of what you can do",

@@ -42,7 +42,7 @@ export function Header() {
     >
       <Container>
         <div className="flex h-18 items-center justify-between gap-6">
-          <Link href="/" aria-label={`${company.name} — home`} className="shrink-0">
+          <Link href="/" aria-label={`${company.name} home page`} className="shrink-0">
             <Logo height={34} priority />
           </Link>
 

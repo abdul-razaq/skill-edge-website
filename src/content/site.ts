@@ -18,7 +18,7 @@ export const company = {
   overview: [
     "Skill Edge Tech Solutions is a technology-driven firm that provides practical training and strategic consulting services to help professionals and businesses build capabilities, optimize processes, and achieve digital transformation.",
     "We bridge the gap between learning and real-world application by equipping individuals with practical, in-demand tech skills and supporting organizations in maximizing the value of their digital investments.",
-    "We believe that acquiring knowledge is not enough — true value comes from applying those skills to solve real business problems, improve processes, and drive measurable results. Everything we do is practical, results-oriented, and built for impact.",
+    "We believe that acquiring knowledge is not enough on its own. True value comes from applying those skills to solve real business problems, improve processes, and drive measurable results. Everything we do is practical, results-oriented, and built for impact.",
   ],
 } as const;
 
@@ -30,7 +30,7 @@ export const contact = {
   whatsappNumber: "2348082225114",
   linkedin: "https://www.linkedin.com/company/skill-edge-tech-solutions",
   // TODO(client): office address, Instagram / Facebook / X links, domain.
-  location: "Online-first — weekend classes delivered live, with recordings for every session.",
+  location: "Online-first, with weekend classes delivered live and recordings for every session.",
 } as const;
 
 /** Builds a wa.me link with a prefilled enquiry message. */
@@ -74,7 +74,7 @@ export const learningBenefits: Benefit[] = [
   {
     title: "Capstone project & presentation",
     description:
-      "Each programme closes with a capstone you scope, build and present — the portfolio piece you take into interviews.",
+      "Each programme closes with a capstone you scope, build and present, giving you a portfolio piece to take into interviews.",
   },
   {
     title: "Certificate of completion",

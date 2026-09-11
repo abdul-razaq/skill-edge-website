@@ -10,7 +10,7 @@ import { contact, whatsappLink } from "@/content/site";
 import { courses } from "@/content/courses";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact Us",
   description:
     "Get in touch with Skill Edge Tech Solutions about training programmes, ERP implementation or technology consulting. Reach us by email, phone or WhatsApp.",
 };
@@ -26,7 +26,10 @@ export default function ContactPage() {
 
       <Section>
         <Container>
-          <div className="grid gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
+          {/* `min-w-0` on the children stops the grid inheriting their
+              min-content width, which the long email address would otherwise
+              push past the viewport on small screens. */}
+          <div className="grid gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-16 [&>*]:min-w-0">
             <ContactForm />
 
             <div className="flex flex-col gap-6">

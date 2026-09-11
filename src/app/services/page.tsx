@@ -12,7 +12,7 @@ import { coreValues } from "@/content/site";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Tech skills training, ERP implementation and support, business process optimization and technology consulting — delivered by a team that implements these systems for a living.",
+    "Tech skills training, ERP implementation and support, business process optimization and technology consulting, delivered by a team that implements these systems for a living.",
 };
 
 const icons: Record<string, LucideIcon> = {
@@ -28,7 +28,7 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="Services"
         title="Practical, results-oriented, built for impact"
-        description="We help organisations maximise the value of their digital investments — from selecting and implementing the right systems to training the people who will run them."
+        description="We help organisations maximise the value of their digital investments, from selecting and implementing the right systems to training the people who will run them."
       >
         <ButtonLink href="/contact" size="lg">
           Discuss your project
@@ -141,7 +141,7 @@ export default function ServicesPage() {
 
       <CtaBand
         title="Tell us what you are trying to fix"
-        description="Whether it is an ERP that is not delivering, a process that keeps stalling, or a team that needs to skill up — start with a conversation."
+        description="Whether it is an ERP that is not delivering, a process that keeps stalling, or a team that needs to skill up, start with a conversation."
       />
     </>
   );

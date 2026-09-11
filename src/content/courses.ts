@@ -54,7 +54,7 @@ export const courses: Course[] = [
     slug: "power-platform",
     title: "Microsoft Power Platform",
     summary:
-      "Build the apps, automations and portals that sit around your business systems — from canvas and model-driven apps through to automated workflows and external-facing Power Pages.",
+      "Build the apps, automations and portals that sit around your business systems, from canvas and model-driven apps through to automated workflows and external-facing Power Pages.",
     audience: "Professionals building low-code business applications and automations.",
     modules: [
       "Canvas App",
@@ -73,7 +73,7 @@ export const courses: Course[] = [
     title: "AI Skills for Business Professionals",
     summary:
       "A non-technical route into applied AI. You learn where AI genuinely helps, how to prompt it for real business tasks, and how to use Copilot across the tools you already work in every day.",
-    audience: "Business professionals applying AI to everyday work — no coding required.",
+    audience: "Business professionals applying AI to everyday work. No coding required.",
     modules: [
       "AI Foundations for Business (Non-Technical)",
       "Prompt Engineering for Business Use Cases",

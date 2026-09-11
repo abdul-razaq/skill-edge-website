@@ -11,7 +11,7 @@ import { company, coreValues } from "@/content/site";
 import { services } from "@/content/services";
 
 export const metadata: Metadata = {
-  title: "About us",
+  title: "About Us",
   description:
     "Skill Edge Tech Solutions is a technology-driven firm providing practical training and strategic consulting that helps professionals and businesses build capabilities and achieve digital transformation.",
 };

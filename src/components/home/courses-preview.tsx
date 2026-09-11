@@ -29,7 +29,9 @@ export function CoursesPreview() {
               href={`/courses#${course.slug}`}
               className="group flex flex-col rounded-2xl border border-ink-100 p-8 transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-lift"
             >
-              <div className="flex items-start justify-between gap-5">
+              {/* Badge sits above the title on narrow screens so the heading
+                  gets the full width instead of being squeezed beside it. */}
+              <div className="flex flex-col-reverse items-start gap-3 sm:flex-row sm:justify-between sm:gap-5">
                 <h3 className="text-xl font-semibold leading-snug">{course.title}</h3>
                 <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-ink-50 px-3 py-1.5 text-xs font-semibold text-ink-600">
                   <Clock className="size-3.5" />

@@ -27,7 +27,7 @@ export function Logo({ height = 36, variant = "color", priority, className }: Lo
   );
 }
 
-/** Symbol only — for tight spaces and square contexts. */
+/** Symbol only, for tight spaces and square contexts. */
 export function LogoMark({
   size = 40,
   variant = "color",
