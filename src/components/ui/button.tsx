@@ -5,7 +5,7 @@ type Variant = "primary" | "secondary" | "ghost" | "onDark";
 type Size = "md" | "lg";
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-full font-semibold whitespace-nowrap " +
+  "inline-flex items-center justify-center gap-2 rounded-full font-semibold whitespace-nowrap max-sm:whitespace-normal " +
   "transition-[background-color,color,box-shadow,transform] duration-200 " +
   "focus-visible:outline-2 focus-visible:outline-offset-2 active:translate-y-px " +
   "disabled:pointer-events-none disabled:opacity-60";

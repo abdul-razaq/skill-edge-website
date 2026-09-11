@@ -5,7 +5,7 @@ import { company } from "@/content/site";
 import { courses } from "@/content/courses";
 
 const highlights = [
-  { icon: CalendarDays, label: "Weekend classes" },
+  { icon: CalendarDays, label: "Live or self-paced" },
   { icon: Target, label: "Real business case studies" },
   { icon: GraduationCap, label: "Capstone + certificate" },
   { icon: PlayCircle, label: "Every session recorded" },
@@ -41,11 +41,16 @@ export function Hero() {
             </p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink href="/courses" size="lg">
+              <ButtonLink href="/courses" size="lg" className="w-full justify-center sm:w-auto">
                 Explore our courses
                 <ArrowRight className="size-[18px]" />
               </ButtonLink>
-              <ButtonLink href="/contact" variant="secondary" size="lg">
+              <ButtonLink
+                href="/contact"
+                variant="secondary"
+                size="lg"
+                className="w-full justify-center sm:w-auto"
+              >
                 Talk to our team
               </ButtonLink>
             </div>
@@ -89,8 +94,8 @@ export function Hero() {
                 </ul>
 
                 <p className="mt-7 text-sm leading-relaxed text-ink-500">
-                  Every track runs on weekends and closes with a capstone project you scope, build
-                  and present.
+                  Live weekends or self-paced, with a private recording link after payment.
+                  Both close with a capstone you present.
                 </p>
               </div>
             </div>

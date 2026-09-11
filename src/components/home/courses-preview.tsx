@@ -13,7 +13,7 @@ export function CoursesPreview() {
           <SectionHeading
             eyebrow="Training catalog"
             title="Choose the track that matches your goal"
-            description="Four programmes, each taking you from foundations through to work you can show an employer."
+            description="Four programmes, live or self-paced, each taking you from foundations through to a capstone you can show."
             className="max-w-2xl"
           />
           <ButtonLink href="/courses" variant="secondary" className="shrink-0 max-sm:self-start">

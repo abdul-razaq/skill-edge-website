@@ -5,6 +5,7 @@ import { CoursesPreview } from "@/components/home/courses-preview";
 import { WhyUs } from "@/components/sections/why-us";
 import { Testimonials } from "@/components/sections/testimonials";
 import { CtaBand } from "@/components/sections/cta-band";
+import { TalentPreview } from "@/components/home/talent-preview";
 
 export const metadata: Metadata = {
   description:
@@ -19,6 +20,7 @@ export default function HomePage() {
       <CoursesPreview />
       <WhyUs />
       <Testimonials />
+      <TalentPreview />
       <CtaBand />
     </>
   );

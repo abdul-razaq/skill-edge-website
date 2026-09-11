@@ -8,7 +8,7 @@ export function Container({ className, width = "default", ...props }: ContainerP
   return (
     <div
       className={cn(
-        "mx-auto w-full px-6 sm:px-8",
+        "mx-auto w-full px-5 sm:px-8",
         width === "narrow" ? "max-w-3xl" : "max-w-6xl",
         className,
       )}

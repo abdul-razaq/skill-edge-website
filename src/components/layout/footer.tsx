@@ -3,7 +3,7 @@ import { Mail, Phone } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Logo } from "@/components/ui/logo";
 import { LinkedInIcon, WhatsAppIcon } from "@/components/ui/social-icons";
-import { company, contact, nav, whatsappLink } from "@/content/site";
+import { company, contact, extraNav, nav, whatsappLink } from "@/content/site";
 import { courses } from "@/content/courses";
 
 export function Footer() {
@@ -29,6 +29,11 @@ export function Footer() {
 
           <FooterColumn title="Company">
             {nav.map((item) => (
+              <FooterLink key={item.href} href={item.href}>
+                {item.label}
+              </FooterLink>
+            ))}
+            {extraNav.map((item) => (
               <FooterLink key={item.href} href={item.href}>
                 {item.label}
               </FooterLink>

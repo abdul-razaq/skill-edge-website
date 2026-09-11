@@ -130,10 +130,15 @@ export default function ServicesPage() {
                   months later.
                 </p>
               </div>
-              <ButtonLink href="/courses" size="lg" className="shrink-0 max-lg:self-start">
-                View the catalog
-                <ArrowRight className="size-[18px]" />
-              </ButtonLink>
+              <div className="flex flex-col gap-3 shrink-0 max-lg:self-start">
+                <ButtonLink href="/courses" size="lg">
+                  View the catalog
+                  <ArrowRight className="size-[18px]" />
+                </ButtonLink>
+                <ButtonLink href="/hire" variant="secondary" size="lg">
+                  Hire Skill Edge Talent
+                </ButtonLink>
+              </div>
             </div>
           </div>
         </Container>

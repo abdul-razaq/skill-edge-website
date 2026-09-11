@@ -17,7 +17,7 @@ export function CtaBand({
   return (
     <section className="bg-white pb-20 sm:pb-24 lg:pb-28">
       <Container>
-        <div className="relative overflow-hidden rounded-3xl bg-ink-900 px-8 py-14 sm:px-14 sm:py-16 lg:px-20 lg:py-20">
+        <div className="relative overflow-hidden rounded-3xl bg-ink-900 px-6 py-12 sm:px-14 sm:py-16 lg:px-20 lg:py-20">
           <div
             aria-hidden
             className="pointer-events-none absolute -right-20 -top-24 size-80 rounded-full bg-brand-500/20 blur-3xl"
@@ -32,7 +32,7 @@ export function CtaBand({
             <p className="mt-5 text-lg leading-relaxed text-ink-200">{description}</p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink href="/contact" variant="onDark" size="lg">
+              <ButtonLink href="/contact" variant="onDark" size="lg" className="w-full justify-center sm:w-auto">
                 Make an enquiry
                 <ArrowRight className="size-[18px]" />
               </ButtonLink>
@@ -41,7 +41,7 @@ export function CtaBand({
                 target="_blank"
                 rel="noreferrer"
                 size="lg"
-                className="bg-white/10 text-white ring-1 ring-white/20 hover:bg-white/20"
+                className="w-full justify-center bg-white/10 text-white ring-1 ring-white/20 hover:bg-white/20 sm:w-auto"
               >
                 <WhatsAppIcon className="size-[17px]" />
                 Chat on WhatsApp

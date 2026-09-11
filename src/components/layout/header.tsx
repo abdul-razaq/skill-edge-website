@@ -7,7 +7,7 @@ import { Menu, X } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { ButtonLink } from "@/components/ui/button";
 import { Logo } from "@/components/ui/logo";
-import { company, nav } from "@/content/site";
+import { company, extraNav, nav } from "@/content/site";
 import { cn } from "@/lib/utils";
 
 export function Header() {
@@ -42,18 +42,18 @@ export function Header() {
     >
       <Container>
         <div className="flex h-18 items-center justify-between gap-6">
-          <Link href="/" aria-label={`${company.name} home page`} className="shrink-0">
-            <Logo height={44} priority />
+          <Link href="/" aria-label={`${company.name} home page`} className="min-w-0 shrink">
+            <Logo height={44} className="max-sm:!h-8 max-sm:!w-auto" priority />
           </Link>
 
-          <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
+          <nav aria-label="Primary" className="hidden items-center gap-0.5 lg:flex">
             {nav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 aria-current={isActive(item.href) ? "page" : undefined}
                 className={cn(
-                  "relative rounded-full px-4 py-2 text-sm font-medium transition-colors",
+                  "relative rounded-full px-3 py-2 text-sm font-medium transition-colors",
                   isActive(item.href)
                     ? "text-brand-700"
                     : "text-ink-600 hover:text-ink-900 hover:bg-ink-50",
@@ -85,10 +85,13 @@ export function Header() {
       </Container>
 
       {open ? (
-        <div id="mobile-nav" className="border-t border-ink-100 bg-white lg:hidden">
+        <div
+          id="mobile-nav"
+          className="max-h-[calc(100dvh-4.5rem)] overflow-y-auto overscroll-contain border-t border-ink-100 bg-white lg:hidden"
+        >
           <Container className="py-5">
             <nav aria-label="Mobile" className="flex flex-col gap-1">
-              {nav.map((item) => (
+              {[...nav, ...extraNav].map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}

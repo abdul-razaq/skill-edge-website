@@ -5,9 +5,9 @@ import { Section } from "@/components/ui/section";
 import { PageHero } from "@/components/ui/page-hero";
 import { ButtonAnchor } from "@/components/ui/button";
 import { LinkedInIcon, WhatsAppIcon } from "@/components/ui/social-icons";
+import { Suspense } from "react";
 import { ContactForm } from "@/components/contact/contact-form";
 import { contact, whatsappLink } from "@/content/site";
-import { courses } from "@/content/courses";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -21,7 +21,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="Let's start the conversation"
-        description="Tell us where you are and what you are aiming for. We will point you to the programme or service that fits, with pricing and the next available cohort."
+        description="Tell us where you are and what you are aiming for. We will reply with the programme or service that fits, including pricing, the next live cohort, or a private recording link if you choose self-paced."
       />
 
       <Section>
@@ -30,10 +30,12 @@ export default function ContactPage() {
               min-content width, which the long email address would otherwise
               push past the viewport on small screens. */}
           <div className="grid gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-16 [&>*]:min-w-0">
-            <ContactForm />
+            <Suspense>
+              <ContactForm />
+            </Suspense>
 
             <div className="flex flex-col gap-6">
-              <div className="rounded-2xl bg-ink-900 p-9 text-ink-200 sm:p-10">
+              <div className="rounded-2xl bg-ink-900 p-6 text-ink-200 sm:p-10">
                 <h2 className="text-xl font-semibold text-white">Reach us directly</h2>
                 <p className="mt-2.5 leading-relaxed text-ink-300">
                   Prefer to talk? WhatsApp is usually the quickest way to get an answer.
@@ -95,8 +97,9 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-ink-900">Class schedule</h3>
                     <p className="mt-1.5 leading-relaxed text-ink-500">
-                      All {courses.length} programmes run as weekend classes, so you can train
-                      without stepping away from work.
+                      Live groups meet at weekends on a start date. Self-paced access is a
+                      private recording link, sent after payment. That is not a place on the live
+                      timetable. When the work is done, you tell us you are ready to present.
                     </p>
                   </div>
                 </div>

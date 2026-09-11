@@ -22,7 +22,7 @@ export function PageHero({ eyebrow, title, description, children, className }: P
         className="pointer-events-none absolute -bottom-48 -left-24 size-[22rem] rounded-full bg-ocean-100/50 blur-3xl"
       />
 
-      <Container className="relative py-20 sm:py-24 lg:py-28">
+      <Container className="relative py-16 sm:py-24 lg:py-28">
         <div className="max-w-3xl">
           <span className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-600">
             {eyebrow}

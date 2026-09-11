@@ -30,7 +30,8 @@ export const contact = {
   whatsappNumber: "2348082225114",
   linkedin: "https://www.linkedin.com/company/skill-edge-tech-solutions",
   // TODO(client): office address, Instagram / Facebook / X links, domain.
-  location: "Online-first, with weekend classes delivered live and recordings for every session.",
+  location:
+    "Online-first. Live programmes run as weekend classes. Self-paced learners receive a private recording link after payment, then tell us when they are ready to present.",
 } as const;
 
 /** Builds a wa.me link with a prefilled enquiry message. */
@@ -44,8 +45,12 @@ export const nav = [
   { href: "/about", label: "About" },
   { href: "/courses", label: "Courses" },
   { href: "/services", label: "Services" },
+  { href: "/hire", label: "Hire Talent" },
   { href: "/contact", label: "Contact" },
 ] as const;
+
+/** Pages that should appear in the sitemap and footer but not the primary nav. */
+export const extraNav = [{ href: "/join", label: "Join the Talent Network" }] as const;
 
 export type Value = { name: string; description: string };
 
@@ -78,7 +83,8 @@ export const learningBenefits: Benefit[] = [
   },
   {
     title: "Certificate of completion",
-    description: "Finish your capstone and receive a certificate recognising the programme you completed.",
+    description:
+      "The certificate is issued after you present your capstone and meet the programme's completion requirements, whether you learned live or self-paced.",
   },
   {
     title: "Class recordings",

@@ -10,11 +10,14 @@ import { Testimonials } from "@/components/sections/testimonials";
 import { WhyUs } from "@/components/sections/why-us";
 import { courses } from "@/content/courses";
 import { whatsappLink } from "@/content/site";
+import { applicationJourney, applyHref } from "@/content/training";
+import { DeliveryOptions } from "@/components/sections/delivery-options";
+import { ReadyToPresent } from "@/components/sections/ready-to-present";
 
 export const metadata: Metadata = {
   title: "Training Courses",
   description:
-    "Practical weekend training in Business Analysis, Dynamics 365 Business Central, Microsoft Power Platform and AI skills. Every track closes with a capstone project, certificate and class recordings.",
+    "Practical training in Business Analysis, Dynamics 365 Business Central, Microsoft Power Platform and AI skills. Join a live weekend cohort, or receive a private recording link after payment. Every track closes with a capstone you present.",
 };
 
 export default function CoursesPage() {
@@ -23,11 +26,11 @@ export default function CoursesPage() {
       <PageHero
         eyebrow="Training catalog"
         title="Practical training with real business case studies"
-        description="Four programmes built for working professionals. Classes run on weekends, every session is recorded, and each track closes with a capstone project you scope, build and present."
+        description="Four programmes for working professionals. Join the live weekend cohort, or learn self-paced from a private recording link sent after payment. Every track closes with a capstone you present."
       >
         <div className="flex flex-col gap-3 sm:flex-row">
-          <ButtonLink href="/contact" size="lg">
-            Request pricing &amp; next cohort
+          <ButtonLink href={applyHref()} size="lg" className="w-full justify-center sm:w-auto">
+            Apply for training
           </ButtonLink>
           <ButtonAnchor
             href={whatsappLink("Hello Skill Edge, I'd like to know more about your courses.")}
@@ -35,12 +38,15 @@ export default function CoursesPage() {
             rel="noreferrer"
             variant="secondary"
             size="lg"
+            className="w-full justify-center sm:w-auto"
           >
             <WhatsAppIcon className="size-[17px] text-brand-600" />
             Ask on WhatsApp
           </ButtonAnchor>
         </div>
       </PageHero>
+
+      <DeliveryOptions />
 
       {/* Quick index */}
       <Section spacing="tight">
@@ -70,7 +76,7 @@ export default function CoursesPage() {
                 className="scroll-mt-28 overflow-hidden rounded-3xl border border-ink-100 bg-white"
               >
                 <div className="grid lg:grid-cols-[1.25fr_1fr]">
-                  <div className="p-9 sm:p-11 lg:p-12">
+                  <div className="p-6 sm:p-11 lg:p-12">
                     <span className="font-display text-sm font-semibold tabular-nums text-brand-500">
                       {String(index + 1).padStart(2, "0")}
                     </span>
@@ -102,7 +108,7 @@ export default function CoursesPage() {
                     </ul>
                   </div>
 
-                  <aside className="flex flex-col gap-7 border-t border-ink-100 bg-ink-50/70 p-9 sm:p-11 lg:justify-center lg:border-l lg:border-t-0 lg:p-12">
+                  <aside className="flex flex-col gap-7 border-t border-ink-100 bg-ink-50/70 p-6 sm:p-11 lg:justify-center lg:border-l lg:border-t-0 lg:p-12">
                     <Detail
                       icon={<CalendarClock className="size-[18px] text-brand-600" />}
                       label="Duration"
@@ -120,8 +126,8 @@ export default function CoursesPage() {
                     />
 
                     <div className="flex flex-col gap-3 pt-2">
-                      <ButtonLink href="/contact" className="w-full">
-                        Request pricing
+                      <ButtonLink href={applyHref({ interest: course.title })} className="w-full">
+                        Apply for this programme
                       </ButtonLink>
                       <ButtonAnchor
                         href={whatsappLink(
@@ -152,27 +158,10 @@ export default function CoursesPage() {
           <SectionHeading
             align="center"
             eyebrow="How it works"
-            title="From first class to capstone presentation"
+            title="From first enquiry to certificate"
           />
           <ol className="mt-14 flex flex-col gap-8">
-            {[
-              {
-                title: "Enquire and reserve your seat",
-                body: "Send us a message with the track you are interested in. We confirm pricing, the deposit and the next cohort start date.",
-              },
-              {
-                title: "Learn on weekends, practise in between",
-                body: "Live classes run at weekends so you can keep working. Hands-on exercises after most sessions keep you building between classes.",
-              },
-              {
-                title: "Build and present your capstone",
-                body: "You scope a real scenario, build the solution and present it. That becomes the portfolio piece you take into interviews.",
-              },
-              {
-                title: "Leave with proof of what you can do",
-                body: "Certificate of completion, all class recordings, and the confidence that comes from having done the work.",
-              },
-            ].map((step, index) => (
+            {applicationJourney.map((step, index) => (
               <li key={step.title} className="flex gap-5">
                 <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-full bg-brand-500 font-display text-sm font-semibold text-white">
                   {index + 1}
@@ -187,6 +176,7 @@ export default function CoursesPage() {
         </Container>
       </Section>
 
+      <ReadyToPresent />
       <Testimonials />
       <CtaBand
         title="Not sure which track fits?"
