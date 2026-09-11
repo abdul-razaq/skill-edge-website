@@ -4,6 +4,8 @@ Five-page corporate site for Skill Edge Tech Solutions, built with Next.js 16, R
 Tailwind CSS v4. The site has no backend: `npm run build` produces a static `out/` folder that can
 be uploaded to any host.
 
+**Live:** https://skill-edge-website.vercel.app
+
 ## Running it
 
 ```bash
@@ -71,8 +73,27 @@ enquiry pre-filled, so enquiries are never silently dropped.
 
 ## Deploying
 
-`npm run build` writes a static site to `out/`. Upload the contents of that folder to any web host,
-or point Vercel / Netlify / Cloudflare Pages at the repository.
+The repository is connected to Vercel, so **every push to `main` deploys automatically**. To ship a
+change, commit and push; Vercel builds and promotes it to production.
+
+To deploy manually from your machine instead:
+
+```bash
+vercel deploy --prod
+```
+
+`npm run build` also writes a plain static site to `out/`, so the contents of that folder can be
+uploaded to any other web host if you ever move away from Vercel.
+
+### Pointing the real domain at the site
+
+Once the domain is ready:
+
+```bash
+vercel domains add skilledgetechsolutions.com
+```
+
+then follow the DNS records Vercel prints, and add them at the registrar.
 
 Before going live, update the domain in three places if it differs from
 `www.skilledgetechsolutions.com`:
