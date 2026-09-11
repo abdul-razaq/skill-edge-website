@@ -3,6 +3,7 @@ import { Inter, Poppins } from "next/font/google";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { company } from "@/content/site";
+import { siteUrl } from "@/lib/site-url";
 import "./globals.css";
 
 const inter = Inter({
@@ -19,7 +20,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.skilledgetechsolutions.com"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: `${company.name} | ${company.taglinePlain}`,
     template: `%s | ${company.name}`,

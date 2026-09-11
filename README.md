@@ -95,12 +95,12 @@ vercel domains add skilledgetechsolutions.com
 
 then follow the DNS records Vercel prints, and add them at the registrar.
 
-Before going live, update the domain in three places if it differs from
-`www.skilledgetechsolutions.com`:
+The canonical domain used in social previews, `sitemap.xml` and `robots.txt` resolves itself from
+`src/lib/site-url.ts`, so there is nothing to edit when the real domain goes live: Vercel repoints
+`VERCEL_PROJECT_PRODUCTION_URL` at the custom domain and the next build picks it up.
 
-- `src/app/layout.tsx` — `metadataBase`
-- `src/app/sitemap.ts` — `BASE_URL`
-- `src/app/robots.ts` — `sitemap`
+If you build for a host other than Vercel, set `NEXT_PUBLIC_SITE_URL` to the live origin so those
+absolute URLs are correct.
 
 ## Still needed from the client
 
